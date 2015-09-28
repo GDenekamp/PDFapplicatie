@@ -1,7 +1,7 @@
 <?php
 // Database connection
 try {
-	$handler = new PDO('mysql:host=127.0.0.1;dbname=futureoffinance' ,'root','');
+	$handler = new PDO('mysql:host=127.0.0.1;dbname=pdfapplicatie' ,'root','');
 	$handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOExeption $e) {
 
@@ -16,7 +16,7 @@ class Users {
 	public $firstname, $lastname;
 
 	public function __construct() {
-		$this->users = "Voornaam: {$this->firstname} Achternaam: {$this->lastname}";
+		$this->users = "<b>Voornaam: </b> {$this->firstname} <b>Achternaam: </b> {$this->lastname}". "<br>";
 	}
 }
 
